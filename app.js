@@ -42,6 +42,9 @@ const linksContainer = document.querySelector("#links");
 links.forEach((link, index) => {
   const anchor = document.createElement("a");
   anchor.className = "link-card";
+  if (link.icon) {
+    anchor.dataset.icon = link.icon;
+  }
   anchor.href = link.href;
   anchor.target = link.href.startsWith("mailto:") ? "_self" : "_blank";
   anchor.rel = link.href.startsWith("mailto:") ? "" : "noreferrer";
@@ -89,6 +92,12 @@ style.textContent = `
     font-style: normal;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+  }
+
+  .link-card[data-icon="instagram"] .link-icon {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    color: #ffffff;
+    box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.16);
   }
 `;
 document.head.appendChild(style);
