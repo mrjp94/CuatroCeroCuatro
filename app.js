@@ -9,7 +9,7 @@ const links = [
   {
     label: "Correo",
     description: "Reservaciones, colaboraciones y contacto directo.",
-    href: "mailto:hello@404brewery.com",
+    href: "mailto:salcedo.juanpa@gmail.com",
     icon: "mail",
     meta: "contacto",
   },
